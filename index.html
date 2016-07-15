@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html data-ng-app="mceBankingSimulatorApp">
+<html data-ng-app="bankingSimulatorApp">
     <head>
         <meta charset="UTF-8">
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
 
         <link href="../css/bootstrap.css" rel="stylesheet">
         <link href="../css/Login.css" rel="stylesheet">
@@ -14,6 +15,14 @@
         <![endif]-->
     </head>
     <body data-ng-controller="bankingSimulatorController">
+        <h1>Angular: {{1+1}}</h1>
 
+        <div data-ng-view=""></div>
+
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/controllers/bankingSimulatorController.js"></script>
+        <script type="text/javascript" src="js/controllers/controllers.js"></script>
+        <script type="text/javascript" src="js/services/services.js"></script>
+        <script type="text/javascript" src="js/services/studentService.js"></script>
     </body>
 </html>
