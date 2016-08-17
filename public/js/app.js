@@ -1,9 +1,12 @@
 /**
  * Created by mattpennella on 7/15/16.
  */
+ 
+ var angular = require("angular");
+ 
 (function(angular) {
     'use strict'
-    angular.module('bankingSimulatorApp', ['ngRoute', 'controllers', 'services']);
+    angular.module('bankingSimulatorApp', [require("angular-route"), 'controllers', 'services']);
     angular.module('bankingSimulatorApp').config(function($routeProvider, $sceProvider) {
         $sceProvider.enabled(false);
 
@@ -14,4 +17,4 @@
         });
     });
 
-}(window.angular));
+}(angular));

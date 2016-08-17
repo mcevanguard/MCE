@@ -4,12 +4,19 @@
   "description": "My Classroom Econ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "browserify -r angular -r angular-route > public/js/bundle.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
     "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.5.1",
+    "browserify": "^13.1.0"
   }
 }
