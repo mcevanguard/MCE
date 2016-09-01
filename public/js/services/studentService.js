@@ -6,8 +6,8 @@
     angular.module('studentService', [])
     .service('studentService', ['$http', function($http){
         this.getStudent = function(id) {
-            return $http.get('Student.json').success(function(student) {
-                return student;
+            return $http.get('Student.json').success(function(students) {
+                return students;
             });
         };
     }]);

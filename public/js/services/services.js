@@ -3,5 +3,5 @@
  */
 (function(angular) {
     'use strict'
-    angular.module('services', ['studentService'])
+    angular.module('services', ['studentService','transactionService'])
 }(window.angular));

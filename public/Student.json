@@ -1,0 +1,19 @@
+[{
+	"id": "34543",
+	"Name": "Jon Snoooow",
+	"Balance": "1000.22",
+	"Role": "Police Officer",
+	"Password": "wwwww"
+}, {
+	"id": "44565",
+	"Name": "Brad Bradson",
+	"Balance": "6555.22",
+	"Role": "Banker",
+	"Password": "asfsd"
+},{
+    "id": "1234",
+	"Name": "Rogaer Francois",
+	"Balance": "6555.22",
+	"Role": "Normal Student",
+	"Password": "asfsd"
+}]

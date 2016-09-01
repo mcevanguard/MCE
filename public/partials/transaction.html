@@ -1,0 +1,26 @@
+<div ng-init = "whatKindOfUser()">
+     <div class="container">
+       <a class="btn btn-primary btn-primary" href="#landingPage" role="button">Back To Class View</a>
+       <!-- button needs session info to validate teacher again and return them to landing page -->
+       <div class="jumbotron" >
+         <table class="table">
+  			<thead class="thead-inverse">
+  			<tr>
+  			    <th class="text-center" colspan ="4"> 
+  			        <h2>{{selectedStudent.Name}}'s Transactions</h2>
+  			        <input type="button" value="<<"/><h3 ng-init="setMonth(0)">{{Month}}</h3><input type="Button" value=">>"/>
+  			    </th>
+  			</tr>    
+     		<th class="text-center">Date</th>
+     		<th class="text-center">Type</th>
+     		<th class="text-center"> Amount</th>
+            <tr ng-repeat="transaction in transactionData" ng-if="transaction.id === selectedStudent.id">
+                 <td class="text-center">{{transaction.date}}</td>
+                 <td class="text-center" ng-if="transaction.type !== 'Transfer'">{{transaction.type}}</td>
+                 <td class="text-center" ng-if="transaction.type === 'Transfer'">{{transaction.type + " To: " + transaction.partner}}</td>
+                 <td class="text-center">{{transaction.ammount | currency}}</td>
+            </tr>
+         </table>
+       </div>
+     </div> <!-- /container -->
+</div>
