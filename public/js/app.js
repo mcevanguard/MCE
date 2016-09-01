@@ -10,10 +10,18 @@
     angular.module('bankingSimulatorApp').config(function($routeProvider, $sceProvider) {
         $sceProvider.enabled(false);
 
-        $routeProvider.when('/Student/:studentId/transaction', {
+        $routeProvider
+        .when('/Student/:studentId/transaction', {
             templateUrl: 'partials/transaction.html'
-        }).otherwise ({
+        })
+        .when("/transaction",{
             templateUrl: 'partials/transaction.html'
+        })
+         .when("/landingPage",{
+            templateUrl: 'partials/landingPage.html'
+        })
+        .otherwise ({
+            templateUrl: 'partials/landingPage.html'
         });
     });
 

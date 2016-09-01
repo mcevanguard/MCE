@@ -8,6 +8,7 @@
     <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/Login.css" rel="stylesheet">
     <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/banking-sim.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -16,15 +17,38 @@
 </head>
 
 <body data-ng-controller="bankingSimulatorController">
-    <h1>Angular: {{1+1}}</h1>
-
-    <div data-ng-view=""></div>
+    <div class="header clearfix">
+         <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">My Classroom Economy: Banking Simulator</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    </div>
+    <div data-ng-view="">
+    </div>
 
     <script type="text/javascript" src="/js/app.js"></script>
     <script type="text/javascript" src="/js/controllers/bankingSimulatorController.js"></script>
     <script type="text/javascript" src="/js/controllers/controllers.js"></script>
     <script type="text/javascript" src="/js/services/services.js"></script>
     <script type="text/javascript" src="/js/services/studentService.js"></script>
+    <script type="text/javascript" src="/js/services/transactionService.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    
 </body>
 
 </html>
