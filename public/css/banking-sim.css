@@ -1,6 +1,10 @@
+
+
 .div100Percent{
    width:100%;
 }
+
+
 
  .borderless tr, .borderless td,.borderless th{
     border: none !important;
@@ -21,3 +25,53 @@
 .inlineBlock{
     display:inline-block;
 }
+
+.MCESimTable{
+
+  border: solid grey 5px;
+  border-radius: 15px;
+
+}
+
+.mceHeader{
+  position: fixed;
+margin-bottom: 1%;
+}
+
+
+body{
+  padding-top: 15px;
+}
+
+
+.navbar-mce {
+
+    background: rgba(#ffffff,0.45);
+
+    transition: 1s;
+
+}
+
+
+
+    .navbar-mce:hover {
+
+        opacity: 1;
+
+        transition: 1s;
+
+        background-color: #9E1B34;
+
+    }
+
+
+
+    .navbar-mce .navbar-nav > li > a:hover {
+
+        color: black;
+
+        background-color: white;
+
+        transition: 1s;
+
+    }
