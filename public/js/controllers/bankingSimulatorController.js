@@ -23,7 +23,6 @@
             var transactionDataPromise = [transactionService.getTransactions($scope.transactions)];
             $q.all(transactionDataPromise).then(function(transactionDataArray) {
                 $scope.transactionData = transactionDataArray[0].data;
-                $scope.setSelectedMonth(10);
             })
         };
         
@@ -65,33 +64,13 @@
                     $scope.selectedMonth = $scope.selectedMonth - 1;
                }
            }else{
-               // no month set, set to current month
-               $scope.selectedMonth = $scope.selectedMonth;
+               // no month set or new student selected, set to current month
+              alert("set to current Month");
+               $scope.selectedMonth = $scope.selectedMonth.getMonth();
            }
-        //   $scope.sortTransactionsByMonth();
-        //   $scope.apply();
        };
        
-      $scope.sortTransactionsByMonth = function(){
-          var dateOfTransaction,i, transaction, monthOfTransaction, numOfTransactions = $scope.transactionData.length;
-          $scope.selectedMonthTransactions = {};
-          for (i= 0; i<= numOfTransactions; i++){
-              transaction = $scope.transactionData[i];
-              dateOfTransaction = transaction.date.split("/");
-              return dateOfTransaction[0];
-             // monthOfTransaction = dateOfTransaction[0].substring(1,2);
-            //   if(monthOfTransaction == $scope.selectedMonth){
-            //       $scope.selectedMonthTransactions.push(transaction);
-            //   }
-          }
-      };
-      
-      
-      
-       
-        
         $scope.loadStudentData();
         $scope.loadTransactionData();
-        //$scope.setSelectedMonth(10);
     }]);
 }(window.angular));

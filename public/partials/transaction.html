@@ -14,14 +14,13 @@
      		<th class="text-center">Date</th>
      		<th class="text-center">Type</th>
      		<th class="text-center"> Amount</th>
-            <tr ng-repeat="transaction in selectedMonthTransactions | sortTransactionsByMonth()" ng-if="transaction.id === selectedStudent.id">
+            <tr ng-repeat="transaction in transactionData | filter: '0' + selectedMonth + '/'" ng-if="transaction.studentID === selectedStudent.id">
                  <td class="text-center">{{transaction.date}}</td>
                  <td class="text-center" ng-if="transaction.type !== 'Transfer'">{{transaction.type}}</td>
                  <td class="text-center" ng-if="transaction.type === 'Transfer'">{{transaction.type + " To: " + transaction.partner}}</td>
                  <td class="text-center">{{transaction.ammount | currency}}</td>
             </tr>
          </table>
-         {{selectedMonthTransactions[0].id}}
        </div>
      </div> <!-- /container -->
 </div>
