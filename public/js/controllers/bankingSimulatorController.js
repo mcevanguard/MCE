@@ -7,8 +7,9 @@
     .controller('bankingSimulatorController', ['$scope','$http', 'studentService','transactionService', '$q', function($scope, $http, studentService,transactionService, $q) {
             $scope.modal = {};
             $scope.selectedStudent;
-            $scope.currentDate = new Date().getMonth();
-       
+            $scope.selectedMonth = new Date().getMonth()-1;
+            $scope.fullMonthName= ["January","Feburary","March","April","May","June","July",
+                                    "August","September","October","November","December"];
        
         $scope.loadStudentData = function() {
             var studentDataPromise = [studentService.getStudent($scope.student)];
@@ -49,13 +50,17 @@
        };
        
        $scope.setMonth= function(monthIncrement){
-          alert("Current Month: " + $scope.currentDate);
-           if(monthIncrement == 1){
+           alert("monthIncrement: " + monthIncrement);
+           if(monthIncrement === 1){
                // increase month by 1
-           }else if (monthIncrement == -1){
+               alert("is 1");
+           }else if (monthIncrement === -1){
                // decrease month by 1
+               alert("is -1");
            }else{
                // no month set, set to current month
+               $scope.selectedMonth = $scope.currentDate.getMonth();
+               alert("selectedMonth: " + $scope.selectedMonth);
                
            }
            

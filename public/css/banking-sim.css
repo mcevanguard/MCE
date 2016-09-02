@@ -1,7 +1,23 @@
-.alignRight{
-    float:right;
+.div100Percent{
+   width:100%;
 }
 
  .borderless tr, .borderless td,.borderless th{
     border: none !important;
+}
+
+.div70Percent{
+    width:70%;
+    float:left;
+    height:20px;
+}
+
+.div30Percent{
+    width:30%;
+    display:inline-block;
+    text-align:center;
+}
+
+.inlineBlock{
+    display:inline-block;
 }
