@@ -1,10 +1,11 @@
-<div class="container">
-	
-      <div class="jumbotron">
-        <p></p>
+<div class="container ">
+
+</br>
+</br>
+<div class="row">
 	        <div class="div100Percent">
   	          <div class="div70Percent">
-    	          <label>Select Class:</label> 
+    	          <label>Select Class:</label>
     	          <select>
     	              <option> Class 1</option>
     	              <option> Class 2</option>
@@ -14,19 +15,21 @@
 	              <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" value="Add Student"/>
 	            </div>
 	          </div>
-	        
-      	
-      	<table class="table">
+</div>
+<div class="row">
+<div class="table-responsive MCESimTable">
+      	<table class="table table-hover">
   			<thead class="thead-inverse">
   			<tr>
-  			    <th class="text-center" colspan ="4"> 
-  			        <h2>Students</h2> 
+  			    <th class="text-center" colspan ="4">
+  			        <h2>Students</h2>
   			    </th>
-  			</tr>    
+  			</tr>
      		<th class="text-center">Name</th>
      		<th class="text-center">Role</th>
      		<th class="text-center"> Balance</th>
      		<th class= "text-center">Remove Student</th>
+				<tbody>
      		<tr ng-repeat="student in studentData">
      			<td class="text-center"><a ng-click = "setSelectedStudent(student)" href="#transaction">{{student.Name}}</a></td>
      			<td class="text-center">{{student.Role}}</td>
@@ -35,13 +38,17 @@
      			  <input type="button" id="$index + removeStudent" value="Remove Student" ng-click="removeStudent($index)"/>
      			</td>
      		</tr>
+			</tbody>
       	</table>
+</div>
+</div>
 
-
+</div>
+</div>
   <!-- Modal (PopOver) -->
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
-    
+
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
@@ -75,8 +82,6 @@
           <input type="button" class="btn btn-default" data-dismiss="modal" value="Close"/>
         </div>
       </div>
-      
+
     </div>
 </div> <!-- /container -->
-
-
