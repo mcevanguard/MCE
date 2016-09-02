@@ -1,6 +1,10 @@
+
+
 .div100Percent{
    width:100%;
 }
+
+
 
  .borderless tr, .borderless td,.borderless th{
     border: none !important;
@@ -20,4 +24,21 @@
 
 .inlineBlock{
     display:inline-block;
+}
+
+.MCESimTable{
+
+  border: solid grey 5px;
+  border-radius: 15px;
+
+}
+
+.mceHeader{
+  position: fixed;
+margin-bottom: 1%;
+}
+
+
+body{
+  padding-top: 15px;
 }
