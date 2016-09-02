@@ -53,19 +53,19 @@
             <tr class="borderless">
               <td>Name: </td>
               <td class="center-block">
-                <input id ="studentName" ng-model="modal.studentName" type="text" />
+                <input id ="studentName" ng-model="modal.studentName"  ng-change = "textValidate(modal.studentName)" type="text" />
               </td>
             </tr>
             <tr class="borderless">
               <td>Role: </td>
               <td class="center-block">
-                <input id ="studentRole" ng-model="modal.studentRole" type="text" />
+                <input id ="studentRole" ng-model="modal.studentRole" ng-change = "textValidate(modal.studentRole)" type="text" />
               </td>
             </tr>
             <tr class="borderless">
               <td>Starting Balance: </td>
               <td class="center-block">
-                <input id ="startingBalance" ng-model="modal.startingBalance" type="text" />
+                <input id ="startingBalance" ng-model="modal.startingBalance" ng-change="numberValidate(modal.startingBalance)" type="text" />
               </td>
             </tr>
           </table>
