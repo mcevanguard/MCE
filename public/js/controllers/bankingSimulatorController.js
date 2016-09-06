@@ -8,6 +8,8 @@
             $scope.selectedMonthTransactions = {};
             $scope.modal = {};
             $scope.selectedStudent;
+            // note this will be oposite due to how disabled property works
+            $scope.addStudentDisabled = true; 
             $scope.selectedMonth = new Date().getMonth();
             $scope.fullMonthName= ["","January","Feburary","March","April","May","June","July",
                                     "August","September","October","November","December"];
@@ -42,7 +44,24 @@
         
         $scope.addStudent = function(modal){
             $scope.studentData.push({'Name':modal.studentName, 'Role': modal.studentRole, 'Balance': modal.startingBalance});
-            $scope.modal = {};
+            $scope.clearModal();
+        };
+        
+        $scope.clearModal = function(){
+             $scope.modal = {};
+        };
+        
+
+        $scope.isCurrency = function(input){
+             var regEx = /^\$?(([1-9][0-9]{0,2}(,[0-9]{3})*)|[0-9]+)?\.[0-9]{1,2}$/;
+             if(regEx.test(input) === false){
+                 $scope.addStudentDisabled = false;
+                 document.getElementById("startingBalance").style.background = "red";
+                 alert("Invalid dollar value. Please enter a valid dollar amount");
+             }else{
+                 $scope.addStudentDisabled = true;
+                 document.getElementById("startingBalance").style.background = "";
+             }
         };
        
        $scope.whatKindOfUser = function(){
@@ -65,7 +84,6 @@
                }
            }else{
                // no month set or new student selected, set to current month
-              alert("set to current Month");
                $scope.selectedMonth = $scope.selectedMonth.getMonth();
            }
        };

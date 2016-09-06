@@ -6,8 +6,7 @@
 }
 
 
-
- .borderless tr, .borderless td,.borderless th{
+.borderless tr, .borderless td,.borderless th{
     border: none !important;
 }
 
@@ -37,6 +36,10 @@
 .mceHeader{
   position: fixed;
 margin-bottom: 1%;
+}
+
+.containerPadding{
+    padding-top:70px;
 }
 
 
