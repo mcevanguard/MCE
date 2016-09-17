@@ -43,12 +43,18 @@
         
         
         $scope.addStudent = function(modal){
-            $scope.studentData.push({'Name':modal.studentName, 'Role': modal.studentRole, 'Balance': modal.startingBalance});
-            $scope.clearModal();
+            var isAddStudentClean = $scope.isCurrency(modal.startingBalance);
+            if (isAddStudentClean === true){
+                $scope.clearModal();
+                $scope.studentData.push({'Name':modal.studentName, 'Role': modal.studentRole, 'Balance': modal.startingBalance});
+            }
         };
         
         $scope.clearModal = function(){
              $scope.modal = {};
+             document.getElementById("startingBalance").style.background = "";
+             $scope.addStudentDisabled = true;
+             
         };
         
 
@@ -57,12 +63,13 @@
              if(regEx.test(input) === false){
                  $scope.addStudentDisabled = false;
                  document.getElementById("startingBalance").style.background = "red";
-                 alert("Invalid dollar value. Please enter a valid dollar amount");
              }else{
                  $scope.addStudentDisabled = true;
                  document.getElementById("startingBalance").style.background = "";
              }
+            return $scope.addStudentDisabled;
         };
+        
        
        $scope.whatKindOfUser = function(){
          // do session and Authentication check
